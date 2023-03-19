@@ -1,0 +1,8 @@
+{
+  "extends": "tsconfig/client",
+  "compilerOptions": {
+    "baseUrl": "./"
+  },
+  "include": ["./**/*", "../shared/**/*"],
+  "exclude": ["**/node_modules", "**/__tests__/*"]
+}

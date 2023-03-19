@@ -1,0 +1,23 @@
+{
+  "name": "fivem-turborepo",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "resources/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "eslint-config": "*",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "packageManager": "yarn@1.22.19"
+}

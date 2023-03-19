@@ -1,0 +1,3 @@
+interface SharedType {
+  input: string;
+}

@@ -7,5 +7,6 @@ export default defineConfig({
   base: './',
   build: {
     emptyOutDir: true,
+    outDir: '../../dist/web',
   },
 });

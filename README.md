@@ -1,73 +1,21 @@
-# Turborepo starter
+### Turborepo starter for TS/JS based FiveM projects
 
-This is an official Yarn v1 starter turborepo.
+How to use (using `cfx-server-data` as your server data folder):
 
-## What's inside?
+1. Copy all files into `cfx-server-data`. This does not modify any files provided by `cfx-server-data` so it should merge without issue, but if you're asked to replace any files.. use own discretion.
+2. Using `cfx-server-data` as your root folder, run `yarn` to install any dependencies.
+3. Run `yarn build` to build all TS/JS resources.
+4. Add each resource name to `server.cfg`
+5. Done, server is ready!
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. It includes the following packages/apps:
+For development, you can run `yarn dev` from the root to start dev environments for each resource. Changes made to any resource will be automatically compiled.
 
-### Apps and Packages
+Creating new resources:
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+1. Create a new project within the [resources](./resources) folder.
+2. Open its `package.json` file
+3. Update the `name` value to contain the name of the monorepo. E.g. `@fivem-turborepo/your-new-and-shiny-resource`. This will allow turborepo to discover the project and install any new dependencies.
+4. Run `yarn` to install the new dependencies.
+5. Done!
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+If you have any questions about turborepo, please refer to its [documentation](https://turbo.build/repo/docs)

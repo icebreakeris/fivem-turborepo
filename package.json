@@ -12,7 +12,6 @@
     "lint": "turbo run lint"
   },
   "devDependencies": {
-    "eslint-config": "*",
     "turbo": "latest"
   },
   "engines": {

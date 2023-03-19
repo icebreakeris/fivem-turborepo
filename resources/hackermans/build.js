@@ -6,7 +6,7 @@ const config = {
     client: 'src/client/index.ts',
     server: 'src/server/index.ts',
   },
-  outdir: 'dist/scripts',
+  outdir: 'dist',
   bundle: true,
   minify: true,
   logLevel: "info",

@@ -1,17 +1,10 @@
 import { useState } from 'react';
 import { useMessageListener } from './hooks/useMessageListener';
 
-interface PositionData {
-  entity: number;
-  x: number;
-  y: number;
-  scale: number;
-}
-
 function App() {
-  const [screenPos, setScreenPos] = useState<PositionData[]>([]);
+  const [screenPos, setScreenPos] = useState<PedPosData[]>([]);
 
-  useMessageListener('position:allpos', (data: PositionData[]) => {
+  useMessageListener('position:allpos', (data: PedPosData[]) => {
     const processed = data.map((pedPos) => {
       const newTop = window.innerHeight * pedPos.y;
       const newLeft = window.innerWidth * pedPos.x;
